@@ -15,7 +15,10 @@
 </head>
 <body>
 		<%
+		request.setCharacterEncoding("utf-8");
 		String searchName = request.getParameter("name");
+		
+		
 		if (searchName == null || searchName.trim().isEmpty()) {
 			out.println("검색할 이름을 입력하세요");
 			return;
